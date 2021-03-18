@@ -30,4 +30,4 @@ end
 
 -- Imposta il canale audio e carica il menu
 audio.reserveChannels(1)
-composer.gotoScene( "scene.menu", { params={ } } )
+composer.gotoScene( "game.menu", { params={ } } )
