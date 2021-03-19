@@ -8,27 +8,33 @@ local json = require( "json" )
 local scene=composer.newScene();
 
 
+-- Funziona che porta al file contente il gioco
 local function gotoGame()
 	composer.gotoScene( "game.game", { time=800, effect="crossFade" } )
 end
 
+-- Funzione che porta al file contente i credits
 local function gotoCredits()
 	composer.gotoScene( "game.credits", { time=800, effect="crossFade" } )
 end
 
+
+-- Scena di creazione vieni avviate per prima
 function scene:create( event ) 
 
         local sceneGroup=self.view
-        local  start= display.newImageRect(sceneGroup,"image/menu/start.png",402,202);
+        local  start= display.newImageRect(sceneGroup,"image/menu/start.png",402,202); -- Caricamento dell'immagine start
+		--Posizinamento dell'immagine start
         start.x = display.contentCenterX
 	    start.y = display.contentCenterY
 
-        local credits=display.newImageRect(sceneGroup,"image/menu/credits.png",402,202);
+        local credits=display.newImageRect(sceneGroup,"image/menu/credits.png",402,202);-- Caricamento dell'immagine credits
+		--Posizinamento dell'immagine Credits
         credits.x=display.contentCenterX
         credits.y=start.y+200
 		
-		start:addEventListener("tap",gotoGame)
-		credits:addEventListener("tap",gotoCredits)
+		start:addEventListener("tap",gotoGame) -- Permette di andare alla funzione gotoGame premendo sul tasto start
+		credits:addEventListener("tap",gotoCredits)-- Permette di andare alla funzione gotoCredits premendo sul tasto credits
 end 
 
 -- show()
