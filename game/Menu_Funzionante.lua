@@ -7,6 +7,15 @@ local json = require( "json" )
 -- Creao la nuova scena
 local scene=composer.newScene();
 
+
+local function gotoGame()
+	composer.gotoScene( "game.game", { time=800, effect="crossFade" } )
+end
+
+local function gotoCredits()
+	composer.gotoScene( "game.credits", { time=800, effect="crossFade" } )
+end
+
 function scene:create( event ) 
 
         local sceneGroup=self.view
@@ -17,6 +26,9 @@ function scene:create( event )
         local credits=display.newImageRect(sceneGroup,"image/menu/credits.png",402,202);
         credits.x=display.contentCenterX
         credits.y=start.y+200
+		
+		start:addEventListener("tap",gotoGame)
+		credits:addEventListener("tap",gotoCredits)
 end 
 
 -- show()
