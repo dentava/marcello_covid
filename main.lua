@@ -18,6 +18,7 @@ native.setProperty( "androidSystemUiVisibility", "immersiveSticky" )
 -- Imposto la variabile mobile
 local isMobile = ( "ios" == system.getInfo("platform") ) or ( "android" == system.getInfo("platform") )
 
+
 -- Ponywolf aggiunge i joistick virtuali e adatta i comandi da tastiera
 system.activate("multitouch")
 if isMobile or isSimulator then

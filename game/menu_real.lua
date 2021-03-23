@@ -35,6 +35,8 @@ function scene:create( event )
 		
 		start:addEventListener("tap",gotoGame) -- Permette di andare alla funzione gotoGame premendo sul tasto start
 		credits:addEventListener("tap",gotoCredits)-- Permette di andare alla funzione gotoCredits premendo sul tasto credits
+		sceneGroup:insert(start)
+		sceneGroup:insert(credits)
 end 
 
 -- show()
