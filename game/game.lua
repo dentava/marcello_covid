@@ -4,10 +4,15 @@ local json = require( "json" )
 local scene = composer.newScene()
 local tiled = require( "com.ponywolf.ponytiled" )
 local physics=require("physics")
-physics.start();
+local fx = require( "com.ponywolf.ponyfx" )
+
+physics.start()
+physics.setGravity( 0, 32 )
 -- Torna al menù principale
 local function backHome()
-    composer.gotoScene("game.menu_real", { time=800, effect="crossFade" });
+	fx.fadeOut( function()
+		composer.gotoScene( "game.menu_real")
+	end)
 end 
 
 local map
@@ -30,6 +35,7 @@ function scene:create( event)
 	local mapData =  json.decodeFile( system.pathForFile( filename, system.ResourceDirectory ) )
     map = tiled.new( mapData, "game/map")
 	map.xScale, map.yScale = 0.70, 0.70
+	sceneGroup:insert( map )
 end
 
 function scene:show( event )
