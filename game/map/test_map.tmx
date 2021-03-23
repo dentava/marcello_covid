@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="15" height="9" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="38">
+ <editorsettings>
+  <export target="test_map.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="swag" tilewidth="1000" tileheight="750" tilecount="33" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="128" height="128" source="image/1.png"/>
+  </tile>
+  <tile id="1">
+   <image width="128" height="128" source="image/2.png"/>
+  </tile>
+  <tile id="2">
+   <image width="128" height="128" source="image/3.png"/>
+  </tile>
+  <tile id="3">
+   <image width="129" height="129" source="image/4.png"/>
+  </tile>
+  <tile id="4">
+   <image width="128" height="128" source="image/5.png"/>
+  </tile>
+  <tile id="5">
+   <image width="128" height="128" source="image/6.png"/>
+  </tile>
+  <tile id="6">
+   <image width="128" height="128" source="image/7.png"/>
+  </tile>
+  <tile id="7">
+   <image width="128" height="128" source="image/8.png"/>
+  </tile>
+  <tile id="8">
+   <image width="128" height="128" source="image/9.png"/>
+  </tile>
+  <tile id="9">
+   <image width="128" height="128" source="image/10.png"/>
+  </tile>
+  <tile id="10">
+   <image width="128" height="128" source="image/11.png"/>
+  </tile>
+  <tile id="11">
+   <image width="128" height="128" source="image/12.png"/>
+  </tile>
+  <tile id="12">
+   <image width="128" height="93" source="image/13.png"/>
+  </tile>
+  <tile id="13">
+   <image width="128" height="93" source="image/14.png"/>
+  </tile>
+  <tile id="14">
+   <image width="128" height="93" source="image/15.png"/>
+  </tile>
+  <tile id="15">
+   <image width="128" height="128" source="image/16.png"/>
+  </tile>
+  <tile id="16">
+   <image width="128" height="99" source="image/17.png"/>
+  </tile>
+  <tile id="17">
+   <image width="128" height="128" source="image/18.png"/>
+  </tile>
+  <tile id="18">
+   <image width="133" height="65" source="image/Bush (1).png"/>
+  </tile>
+  <tile id="19">
+   <image width="133" height="65" source="image/Bush (2).png"/>
+  </tile>
+  <tile id="20">
+   <image width="73" height="47" source="image/Bush (3).png"/>
+  </tile>
+  <tile id="21">
+   <image width="73" height="46" source="image/Bush (4).png"/>
+  </tile>
+  <tile id="22">
+   <image width="77" height="77" source="image/Crate.png"/>
+  </tile>
+  <tile id="23">
+   <image width="49" height="41" source="image/Mushroom_1.png"/>
+  </tile>
+  <tile id="24">
+   <image width="50" height="41" source="image/Mushroom_2.png"/>
+  </tile>
+  <tile id="25">
+   <image width="63" height="65" source="image/Sign_1.png"/>
+  </tile>
+  <tile id="26">
+   <image width="62" height="64" source="image/Sign_2.png"/>
+  </tile>
+  <tile id="27">
+   <image width="90" height="54" source="image/Stone.png"/>
+  </tile>
+  <tile id="28">
+   <image width="116" height="44" source="image/Tree_1.png"/>
+  </tile>
+  <tile id="29">
+   <image width="282" height="301" source="image/Tree_2.png"/>
+  </tile>
+  <tile id="30">
+   <image width="282" height="275" source="image/Tree_3.png"/>
+  </tile>
+  <tile id="31">
+   <image width="1000" height="750" source="image/BG.png"/>
+  </tile>
+  <tile id="32">
+   <image width="800" height="400" source="image/3-bg-full.png"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="Livello tile 1" width="15" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+30,0,26,0,0,13,14,15,0,0,0,0,0,0,0,
+2,2,2,2,0,0,0,0,0,13,14,15,0,1,2,
+5,5,5,5,17,17,17,17,17,17,17,17,17,4,5
+</data>
+ </layer>
+ <objectgroup id="13" name="box" offsetx="28" offsety="6.06061">
+  <properties>
+   <property name="bodyType" value="dynamic"/>
+  </properties>
+  <object id="21" name="box1" type="box" gid="23" x="764.303" y="714.758" width="77" height="77">
+   <properties>
+    <property name="bodyType" value="dynamic"/>
+   </properties>
+  </object>
+  <object id="23" name="box2" type="box" gid="23" x="1281.45" y="765.303" width="77" height="77">
+   <properties>
+    <property name="bodyType" value="dynamic"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="14" name="piattaforme">
+  <object id="36" x="640" y="801.352">
+   <properties>
+    <property name="bodyType" value="static"/>
+    <property name="isVisible" value=""/>
+   </properties>
+   <polygon points="0,0 2.64828,45.963 90.0414,95.9815 287.338,95.9815 384,43.2593 384,-1.35185"/>
+  </object>
+  <object id="37" x="1152" y="928">
+   <properties>
+    <property name="bodyType" value="dynamic"/>
+    <property name="isVisible" value=""/>
+   </properties>
+   <polygon points="0,0 2.64828,45.963 90.0414,95.9815 287.338,95.9815 384,43.2593 384,-1.35185"/>
+  </object>
+ </objectgroup>
+</map>
