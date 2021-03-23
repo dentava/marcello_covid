@@ -23,10 +23,10 @@ local isMobile = ( "ios" == system.getInfo("platform") ) or ( "android" == syste
 system.activate("multitouch")
 if isMobile or isSimulator then
 	local vjoy = require( "com.ponywolf.vjoy" )
-	local stick = vjoy.newStick()
-	stick.x, stick.y = 128, display.contentHeight - 128
+	local stick = vjoy.newStick(1,48,70)
+	stick.x, stick.y = 128, display.contentHeight - 100
 	local button = vjoy.newButton()
-	button.x, button.y = display.contentWidth - 128, display.contentHeight - 128
+	button.x, button.y = display.contentWidth - 128, display.contentHeight - 100
 end
 
 -- Imposta il canale audio e carica il menu
