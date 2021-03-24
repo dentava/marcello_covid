@@ -22,21 +22,20 @@ end
 -- Scena di creazione vieni avviate per prima
 function scene:create( event ) 
 
-        local sceneGroup=self.view
-        local  start= display.newImageRect(sceneGroup,"image/menu/start.png",402,202); -- Caricamento dell'immagine start
-		--Posizinamento dell'immagine start
-        start.x = display.contentCenterX
-	    start.y = display.contentCenterY
-
-        local credits=display.newImageRect(sceneGroup,"image/menu/credits.png",402,202);-- Caricamento dell'immagine credits
-		--Posizinamento dell'immagine Credits
-        credits.x=display.contentCenterX
-        credits.y=start.y+200
-		
-		start:addEventListener("tap",gotoGame) -- Permette di andare alla funzione gotoGame premendo sul tasto start
-		credits:addEventListener("tap",gotoCredits)-- Permette di andare alla funzione gotoCredits premendo sul tasto credits
-		sceneGroup:insert(start)
-		sceneGroup:insert(credits)
+    local sceneGroup=self.view
+    local  start= display.newImageRect(sceneGroup,"image/menu/start.png",402,202); -- Caricamento dell'immagine start
+	--Posizinamento dell'immagine start
+    start.x = display.contentCenterX
+	start.y = display.contentCenterY
+    local credits=display.newImageRect(sceneGroup,"image/menu/credits.png",402,202);-- Caricamento dell'immagine credits
+	--Posizinamento dell'immagine Credits
+    credits.x=display.contentCenterX
+    credits.y=start.y+200
+	
+	start:addEventListener("tap",gotoGame) -- Permette di andare alla funzione gotoGame premendo sul tasto start
+	credits:addEventListener("tap",gotoCredits)-- Permette di andare alla funzione gotoCredits premendo sul tasto credits
+	sceneGroup:insert(start)
+	sceneGroup:insert(credits)
 end 
 
 -- show()
