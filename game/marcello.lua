@@ -13,4 +13,5 @@ function marcello.new(instance, options)
     instance.isVisible = false
 	local parent = instance.parent
 	local x, y = instance.x, instance.y
+    
 end
