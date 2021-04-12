@@ -10,7 +10,7 @@ local scene=composer.newScene();
 
 -- Funziona che porta al file contente il gioco
 local function gotoGame()
-	composer.gotoScene( "game.game", { time=800, effect="crossFade" } )
+	composer.gotoScene( "game.regioni", { time=800, effect="crossFade" } )
 end
 
 -- Funzione che porta al file contente i credits
@@ -90,4 +90,3 @@ scene:addEventListener( "destroy", scene )
 -- -----------------------------------------------------------------------------------
 
 return scene
-
