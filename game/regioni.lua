@@ -29,10 +29,10 @@ function scene:create( event)
 
     --Carico la mappa 
     local filename ="game/map/mappa_regioni.json"
-	local mapData =  json.decodeFile( system.pathForFile( filename, system.ResourceDirectory ) )
-    map = tiled.new( mapData, "game/map")
-	map.xScale, map.yScale = 2,2
-	sceneGroup:insert(map)
+    local mapData =  json.decodeFile( system.pathForFile( filename, system.ResourceDirectory ) )
+    map = tiled.new(mapData, "game/map")
+    map.xScale, map.yScale = 2,2
+    sceneGroup:insert(map)
 end 
 
 
